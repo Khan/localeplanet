@@ -3,12 +3,12 @@ Content is from
 
 As of 16 May 2013, localeplanet supports date formatting and number
 formatting, but not time formatting.  (Though it does have
-translations for AM and PM.)  This should be enough for our puposes,
+translations for AM and PM.)  This should be enough for our purposes,
 which include translating highcharts, the various date-pickers we
 have, our own commafy method, etc.
 
 We like localeplanet because the data files are very short, and
-they're separated out per-languae, just like we like.
+they're separated out per-language, just like we like.
 
 The short download.sh script downloads the latest data from
 localeplanet, making sure to get all the languages that babel
