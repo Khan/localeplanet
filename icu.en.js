@@ -20,4 +20,7 @@
 	icu.getLocale = function() { return "en" };
 	icu.getLocaleName = function() { return "English" };
 
+    if (typeof module !== "undefined") {
+        module.exports = icu;
+    }
 })();
