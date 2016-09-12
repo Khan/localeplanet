@@ -81,6 +81,9 @@ window.icu = {
     getLocale() {
         return locale;
     },
+    getLanguage() {
+        return locale.split("-")[0];
+    },
     setLocale(newLocale) {
         locale = newLocale;
     },
