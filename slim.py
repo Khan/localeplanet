@@ -78,16 +78,16 @@ var data = %s;
 var locale = 'en-US';
 
 window.icu = {
-    getLocale() {
+    getLocale: function() {
         return locale;
     },
-    getLanguage() {
+    getLanguage: function() {
         return locale.split("-")[0];
     },
-    setLocale(newLocale) {
+    setLocale: function(newLocale) {
         locale = newLocale;
     },
-    getDecimalFormatSymbols() {
+    getDecimalFormatSymbols: function() {
         return data.configs[data.locales[locale]] || data.configs[0];
     }
 };
@@ -96,7 +96,8 @@ window.icu = {
 
     print '''Wrote to %s
 
-Now copy it into ~/khan/mobile-client-webview-resources/javascript/
+Now copy it into ~/khan/mobile-client-webview-resources/\
+ThirdParty/javascript-khansrc/localeplanet/
 ''' % destination
 
 if __name__ == '__main__':
