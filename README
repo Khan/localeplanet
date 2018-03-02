@@ -13,3 +13,17 @@ they're separated out per-language, just like we like.
 The short download.sh script downloads the latest data from
 localeplanet, making sure to get all the languages that babel
 supports.
+
+After downloading icu.en.js is modified in the following way:
+
+-       window.icu = window.icu || new Object();
+-       var icu = window.icu;
++    var icu;
++
++    if (typeof window !== "undefined") {
++        icu = window.icu = window.icu || {};
++    } else if (typeof module !== "undefined") {
++        icu = module.exports = {};
++    }
+
+This makes it so that icu becomes available when running our JS inside Node.
