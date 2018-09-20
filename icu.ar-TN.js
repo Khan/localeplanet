@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "العربية (تونس)" };
 
 })();
+
+module.exports = icu;

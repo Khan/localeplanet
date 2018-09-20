@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Ελληνικά (Πολυτονικό)" };
 
 })();
+
+module.exports = icu;

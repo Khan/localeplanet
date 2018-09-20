@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Ελληνικά (Κύπρος)" };
 
 })();
+
+module.exports = icu;

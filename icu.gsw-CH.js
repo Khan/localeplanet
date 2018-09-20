@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Schwiizertüütsch (Schwiiz)" };
 
 })();
+
+module.exports = icu;

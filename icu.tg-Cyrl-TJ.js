@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Tajik (Cyrillic, Tajikistan)" };
 
 })();
+
+module.exports = icu;

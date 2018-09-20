@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "English (Deseret)" };
 
 })();
+
+module.exports = icu;

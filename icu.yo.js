@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Èdè Yorùbá" };
 
 })();
+
+module.exports = icu;

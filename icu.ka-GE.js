@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ქართული (საქართველო)" };
 
 })();
+
+module.exports = icu;

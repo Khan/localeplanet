@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Bahasa Melayu (Malaysia)" };
 
 })();
+
+module.exports = icu;

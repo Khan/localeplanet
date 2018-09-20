@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Xhosa (South Africa)" };
 
 })();
+
+module.exports = icu;

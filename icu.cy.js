@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Cymraeg" };
 
 })();
+
+module.exports = icu;

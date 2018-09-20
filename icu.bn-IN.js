@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "বাংলা (ভারত)" };
 
 })();
+
+module.exports = icu;

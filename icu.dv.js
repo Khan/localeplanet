@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Divehi" };
 
 })();
+
+module.exports = icu;

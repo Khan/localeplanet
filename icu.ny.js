@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Nyanja" };
 
 })();
+
+module.exports = icu;

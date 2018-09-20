@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Syriac" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "español (Bolivia)" };
 
 })();
+
+module.exports = icu;

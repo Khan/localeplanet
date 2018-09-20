@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "español (Costa Rica)" };
 
 })();
+
+module.exports = icu;

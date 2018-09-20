@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Tsonga" };
 
 })();
+
+module.exports = icu;

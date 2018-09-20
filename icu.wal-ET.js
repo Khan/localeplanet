@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Walamo (Ethiopia)" };
 
 })();
+
+module.exports = icu;

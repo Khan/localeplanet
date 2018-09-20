@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Ga" };
 
 })();
+
+module.exports = icu;

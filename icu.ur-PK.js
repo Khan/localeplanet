@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "اردو (پاکستان)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "English (Trinidad and Tobago)" };
 
 })();
+
+module.exports = icu;

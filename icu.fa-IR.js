@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "فارسی (ایران)" };
 
 })();
+
+module.exports = icu;

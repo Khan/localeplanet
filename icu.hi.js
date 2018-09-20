@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "हिन्दी" };
 
 })();
+
+module.exports = icu;

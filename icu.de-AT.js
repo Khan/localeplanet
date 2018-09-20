@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Deutsch (Österreich)" };
 
 })();
+
+module.exports = icu;

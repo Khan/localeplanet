@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "English (Shavian)" };
 
 })();
+
+module.exports = icu;

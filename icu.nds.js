@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Low German" };
 
 })();
+
+module.exports = icu;

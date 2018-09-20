@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "moldovenească" };
 
 })();
+
+module.exports = icu;

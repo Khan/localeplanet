@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Deutsch (Schweiz)" };
 
 })();
+
+module.exports = icu;

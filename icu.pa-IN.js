@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ਪੰਜਾਬੀ (ਭਾਰਤ)" };
 
 })();
+
+module.exports = icu;

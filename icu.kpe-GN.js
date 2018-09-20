@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Kpelle (Guinea)" };
 
 })();
+
+module.exports = icu;

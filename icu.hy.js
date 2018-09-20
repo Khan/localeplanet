@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Հայերէն" };
 
 })();
+
+module.exports = icu;

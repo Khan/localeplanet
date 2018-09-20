@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ไทย" };
 
 })();
+
+module.exports = icu;

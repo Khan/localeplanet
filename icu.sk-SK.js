@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "slovenčina (Slovenská republika)" };
 
 })();
+
+module.exports = icu;

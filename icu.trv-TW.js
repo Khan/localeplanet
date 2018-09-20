@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Taroko (Taiwan)" };
 
 })();
+
+module.exports = icu;

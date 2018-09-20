@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Uighur (Arabic)" };
 
 })();
+
+module.exports = icu;

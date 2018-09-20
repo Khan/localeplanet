@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "español (Paraguay)" };
 
 })();
+
+module.exports = icu;

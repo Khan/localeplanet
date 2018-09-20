@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "magyar" };
 
 })();
+
+module.exports = icu;

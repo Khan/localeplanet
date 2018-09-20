@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Wolof (Latin)" };
 
 })();
+
+module.exports = icu;

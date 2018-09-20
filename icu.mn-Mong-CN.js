@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Mongolian (Mongolian, China)" };
 
 })();
+
+module.exports = icu;

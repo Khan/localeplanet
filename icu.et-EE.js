@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "eesti (Eesti)" };
 
 })();
+
+module.exports = icu;

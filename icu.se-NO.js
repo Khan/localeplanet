@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Northern Sami (Norway)" };
 
 })();
+
+module.exports = icu;

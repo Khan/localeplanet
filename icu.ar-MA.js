@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "العربية (المغرب)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Koro" };
 
 })();
+
+module.exports = icu;

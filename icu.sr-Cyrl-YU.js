@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Српски (Ћирилица, Србија)" };
 
 })();
+
+module.exports = icu;

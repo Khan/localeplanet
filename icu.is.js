@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "íslenska" };
 
 })();
+
+module.exports = icu;

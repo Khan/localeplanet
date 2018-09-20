@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "čeština" };
 
 })();
+
+module.exports = icu;

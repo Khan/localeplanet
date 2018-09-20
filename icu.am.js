@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "አማርኛ" };
 
 })();
+
+module.exports = icu;

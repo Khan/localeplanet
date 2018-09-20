@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Oromoo (Keeniyaa)" };
 
 })();
+
+module.exports = icu;

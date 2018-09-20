@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "اۉزبېک (افغانستان)" };
 
 })();
+
+module.exports = icu;

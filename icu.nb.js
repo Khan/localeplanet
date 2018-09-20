@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "norsk bokmål" };
 
 })();
+
+module.exports = icu;

@@ -27,3 +27,6 @@ After downloading icu.en.js is modified in the following way:
 +    }
 
 This makes it so that icu becomes available when running our JS inside Node.
+
+After running download.sh, you also need to run add_module_exports.py. See
+add_module_exports.py for instructions.

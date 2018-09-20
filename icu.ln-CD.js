@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "lingála (Repibiki demokratiki ya Kongó)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Soomaali (Itoobiya)" };
 
 })();
+
+module.exports = icu;

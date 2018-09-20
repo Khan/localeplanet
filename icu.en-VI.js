@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "English (U.S. Virgin Islands)" };
 
 })();
+
+module.exports = icu;

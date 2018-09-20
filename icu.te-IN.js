@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "తెలుగు (భారత దేశం)" };
 
 })();
+
+module.exports = icu;

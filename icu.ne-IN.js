@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "नेपाली (भारत)" };
 
 })();
+
+module.exports = icu;

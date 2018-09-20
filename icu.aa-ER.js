@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Afar (Eritrea)" };
 
 })();
+
+module.exports = icu;

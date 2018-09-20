@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "shqip (Shqipëria)" };
 
 })();
+
+module.exports = icu;

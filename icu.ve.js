@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Venda" };
 
 })();
+
+module.exports = icu;

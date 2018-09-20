@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Mongolian (Cyrillic)" };
 
 })();
+
+module.exports = icu;

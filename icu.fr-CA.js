@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "français (Canada)" };
 
 })();
+
+module.exports = icu;

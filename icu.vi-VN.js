@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Tiếng Việt (Việt Nam)" };
 
 })();
+
+module.exports = icu;

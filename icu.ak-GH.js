@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Akan (Gaana)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "қазақ тілі (кириллица)" };
 
 })();
+
+module.exports = icu;

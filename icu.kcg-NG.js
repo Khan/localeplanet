@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Tyap (Nigeria)" };
 
 })();
+
+module.exports = icu;

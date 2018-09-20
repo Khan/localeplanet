@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "اۉزبېک (Arab)" };
 
 })();
+
+module.exports = icu;

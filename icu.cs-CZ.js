@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "čeština (Česká republika)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "پښتو (افغانستان)" };
 
 })();
+
+module.exports = icu;

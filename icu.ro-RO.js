@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "română (România)" };
 
 })();
+
+module.exports = icu;

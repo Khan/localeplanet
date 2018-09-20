@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "italiano (Svizzera)" };
 
 })();
+
+module.exports = icu;

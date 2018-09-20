@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Ўзбек" };
 
 })();
+
+module.exports = icu;

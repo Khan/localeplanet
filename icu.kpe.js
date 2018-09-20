@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Kpelle" };
 
 })();
+
+module.exports = icu;

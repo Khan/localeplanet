@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Friulian (Italy)" };
 
 })();
+
+module.exports = icu;

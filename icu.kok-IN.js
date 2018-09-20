@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "कोंकणी (भारत)" };
 
 })();
+
+module.exports = icu;

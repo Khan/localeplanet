@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "kernewek" };
 
 })();
+
+module.exports = icu;

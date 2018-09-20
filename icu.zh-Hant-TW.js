@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "中文（繁體中文，台灣）" };
 
 })();
+
+module.exports = icu;

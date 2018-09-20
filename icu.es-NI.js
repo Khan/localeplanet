@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "español (Nicaragua)" };
 
 })();
+
+module.exports = icu;

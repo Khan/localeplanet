@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "العربية (الأردن)" };
 
 })();
+
+module.exports = icu;

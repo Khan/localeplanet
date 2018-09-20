@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "eʋegbe (Ghana nutome)" };
 
 })();
+
+module.exports = icu;

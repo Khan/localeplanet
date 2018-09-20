@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Tswana" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Afar (Djibouti)" };
 
 })();
+
+module.exports = icu;

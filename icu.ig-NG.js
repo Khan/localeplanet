@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Igbo (Nigeria)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Ga (Ghana)" };
 
 })();
+
+module.exports = icu;

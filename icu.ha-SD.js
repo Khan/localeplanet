@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Hausa (Sudan)" };
 
 })();
+
+module.exports = icu;

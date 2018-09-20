@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "føroyskt" };
 
 })();
+
+module.exports = icu;

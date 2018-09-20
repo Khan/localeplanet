@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Èdè Yorùbá (Orílẹ́ède Nàìjíríà)" };
 
 })();
+
+module.exports = icu;

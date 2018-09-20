@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "polski" };
 
 })();
+
+module.exports = icu;

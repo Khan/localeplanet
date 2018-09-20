@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Soomaali (Jabuuti)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Азәрбајҹан (kiril)" };
 
 })();
+
+module.exports = icu;

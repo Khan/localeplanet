@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ဗမာ (မြန်မာ)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "português" };
 
 })();
+
+module.exports = icu;

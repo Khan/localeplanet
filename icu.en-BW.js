@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "English (Botswana)" };
 
 })();
+
+module.exports = icu;

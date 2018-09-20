@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ትግርኛ (ER)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Coptic" };
 
 })();
+
+module.exports = icu;

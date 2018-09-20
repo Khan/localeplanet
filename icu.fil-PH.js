@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Filipino (Pilipinas)" };
 
 })();
+
+module.exports = icu;

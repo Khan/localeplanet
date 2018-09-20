@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "nynorsk (Noreg)" };
 
 })();
+
+module.exports = icu;

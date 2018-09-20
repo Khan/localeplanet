@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "azərbaycanca" };
 
 })();
+
+module.exports = icu;

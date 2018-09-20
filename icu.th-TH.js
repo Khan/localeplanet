@@ -179,3 +179,5 @@ java.lang.Exception: Unknown field "G" at offset 17 in pattern "EEEE'ที่ '
 	icu.getLocaleName = function() { return "ไทย (ไทย)" };
 
 })();
+
+module.exports = icu;

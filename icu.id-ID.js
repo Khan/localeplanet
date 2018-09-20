@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Bahasa Indonesia (Indonesia)" };
 
 })();
+
+module.exports = icu;

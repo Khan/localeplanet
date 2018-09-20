@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Tigre" };
 
 })();
+
+module.exports = icu;

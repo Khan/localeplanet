@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "lingála (Kongo)" };
 
 })();
+
+module.exports = icu;

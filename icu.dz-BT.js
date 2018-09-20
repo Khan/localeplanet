@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Dzongkha (Bhutan)" };
 
 })();
+
+module.exports = icu;

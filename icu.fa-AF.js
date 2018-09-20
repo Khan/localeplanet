@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "دری (افغانستان)" };
 
 })();
+
+module.exports = icu;

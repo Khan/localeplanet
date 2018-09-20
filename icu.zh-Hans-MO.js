@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "中文（简体中文、中国澳门特别行政区）" };
 
 })();
+
+module.exports = icu;

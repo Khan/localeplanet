@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Geez" };
 
 })();
+
+module.exports = icu;

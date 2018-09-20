@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "English (Australia)" };
 
 })();
+
+module.exports = icu;

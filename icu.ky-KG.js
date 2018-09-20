@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Kirghiz (Kyrgyzstan)" };
 
 })();
+
+module.exports = icu;

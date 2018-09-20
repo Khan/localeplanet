@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "অসমীয়া (ভাৰত)" };
 
 })();
+
+module.exports = icu;

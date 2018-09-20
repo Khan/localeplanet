@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Afrikaans (Namibië)" };
 
 })();
+
+module.exports = icu;

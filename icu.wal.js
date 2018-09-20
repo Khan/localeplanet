@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Walamo" };
 
 })();
+
+module.exports = icu;

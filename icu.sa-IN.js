@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Sanskrit (India)" };
 
 })();
+
+module.exports = icu;

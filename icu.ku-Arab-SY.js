@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Kurdish (Arabic, Syria)" };
 
 })();
+
+module.exports = icu;

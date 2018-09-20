@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "العربية (لبنان)" };
 
 })();
+
+module.exports = icu;

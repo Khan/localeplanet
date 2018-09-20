@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Geez (Ethiopia)" };
 
 })();
+
+module.exports = icu;

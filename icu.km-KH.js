@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ភាសាខ្មែរ (កម្ពុជា)" };
 
 })();
+
+module.exports = icu;

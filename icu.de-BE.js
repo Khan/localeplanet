@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Deutsch (Belgien)" };
 
 })();
+
+module.exports = icu;

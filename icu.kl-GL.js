@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "kalaallisut (Kalaallit Nunaat)" };
 
 })();
+
+module.exports = icu;

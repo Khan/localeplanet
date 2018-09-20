@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Koro (Côte d’Ivoire)" };
 
 })();
+
+module.exports = icu;

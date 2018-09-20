@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Jju (Nigeria)" };
 
 })();
+
+module.exports = icu;

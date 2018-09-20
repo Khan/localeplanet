@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Oromoo (Itoophiyaa)" };
 
 })();
+
+module.exports = icu;

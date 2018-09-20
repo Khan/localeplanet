@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "lingála" };
 
 })();
+
+module.exports = icu;

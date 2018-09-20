@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "isiZulu (iNingizimu Afrika)" };
 
 })();
+
+module.exports = icu;

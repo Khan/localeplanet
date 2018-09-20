@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "македонски" };
 
 })();
+
+module.exports = icu;

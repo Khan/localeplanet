@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "العربية (السودان)" };
 
 })();
+
+module.exports = icu;

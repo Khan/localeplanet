@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Nederlands (België)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Kurdish (Latin, Turkey)" };
 
 })();
+
+module.exports = icu;

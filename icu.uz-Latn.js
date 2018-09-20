@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "oʼzbekcha (Lotin)" };
 
 })();
+
+module.exports = icu;

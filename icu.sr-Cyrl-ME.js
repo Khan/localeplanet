@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Српски (Ћирилица, Црна Гора)" };
 
 })();
+
+module.exports = icu;

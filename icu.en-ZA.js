@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "English (South Africa)" };
 
 })();
+
+module.exports = icu;

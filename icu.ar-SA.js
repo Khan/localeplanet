@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "العربية (المملكة العربية السعودية)" };
 
 })();
+
+module.exports = icu;

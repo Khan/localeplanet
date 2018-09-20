@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Soomaali (Kiiniya)" };
 
 })();
+
+module.exports = icu;

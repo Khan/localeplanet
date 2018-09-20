@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "اردو (بھارت)" };
 
 })();
+
+module.exports = icu;

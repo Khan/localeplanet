@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "한국어" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Lao (Laos)" };
 
 })();
+
+module.exports = icu;

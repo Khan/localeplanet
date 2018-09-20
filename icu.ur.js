@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "اردو" };
 
 })();
+
+module.exports = icu;

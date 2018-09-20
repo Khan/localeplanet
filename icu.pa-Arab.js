@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "پنجاب (العربية)" };
 
 })();
+
+module.exports = icu;

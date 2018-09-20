@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "English (U.S. Minor Outlying Islands)" };
 
 })();
+
+module.exports = icu;

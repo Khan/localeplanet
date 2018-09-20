@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Hausa (Latn, Gana)" };
 
 })();
+
+module.exports = icu;

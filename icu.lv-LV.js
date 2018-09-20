@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "latviešu (Latvija)" };
 
 })();
+
+module.exports = icu;

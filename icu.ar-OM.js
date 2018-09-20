@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "العربية (عُمان)" };
 
 })();
+
+module.exports = icu;

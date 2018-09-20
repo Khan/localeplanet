@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Sidamo (Ethiopia)" };
 
 })();
+
+module.exports = icu;

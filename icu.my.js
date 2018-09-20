@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ဗမာ" };
 
 })();
+
+module.exports = icu;

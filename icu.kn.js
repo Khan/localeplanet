@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ಕನ್ನಡ" };
 
 })();
+
+module.exports = icu;

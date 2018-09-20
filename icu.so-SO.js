@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Soomaali (Soomaaliya)" };
 
 })();
+
+module.exports = icu;

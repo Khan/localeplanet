@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Occitan" };
 
 })();
+
+module.exports = icu;

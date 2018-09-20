@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Divehi (Maldives)" };
 
 })();
+
+module.exports = icu;

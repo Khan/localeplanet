@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Kiswahili (Kenya)" };
 
 })();
+
+module.exports = icu;

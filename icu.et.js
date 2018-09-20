@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "eesti" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "oʼzbekcha (Lotin, Oʼzbekiston)" };
 
 })();
+
+module.exports = icu;

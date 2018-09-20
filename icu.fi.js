@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "suomi" };
 
 })();
+
+module.exports = icu;

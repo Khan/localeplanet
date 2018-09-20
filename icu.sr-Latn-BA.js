@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Srpski (Latinica, Bosna i Hercegovina)" };
 
 })();
+
+module.exports = icu;

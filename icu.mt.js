@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Malti" };
 
 })();
+
+module.exports = icu;

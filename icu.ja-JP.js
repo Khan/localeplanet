@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "日本語(日本)" };
 
 })();
+
+module.exports = icu;

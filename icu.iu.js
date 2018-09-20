@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Inuktitut" };
 
 })();
+
+module.exports = icu;

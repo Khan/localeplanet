@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "中文（简体中文、中国）" };
 
 })();
+
+module.exports = icu;

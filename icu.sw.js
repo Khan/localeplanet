@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Kiswahili" };
 
 })();
+
+module.exports = icu;

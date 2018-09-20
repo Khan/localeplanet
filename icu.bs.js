@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "bosanski" };
 
 })();
+
+module.exports = icu;

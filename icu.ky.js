@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Kirghiz" };
 
 })();
+
+module.exports = icu;

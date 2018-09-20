@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "беларуская (Беларусь)" };
 
 })();
+
+module.exports = icu;

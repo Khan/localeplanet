@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "română (Republica Moldova)" };
 
 })();
+
+module.exports = icu;

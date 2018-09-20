@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ଓଡ଼ିଆ (ଭାରତ)" };
 
 })();
+
+module.exports = icu;

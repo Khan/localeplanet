@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Türkçe (Türkiye)" };
 
 })();
+
+module.exports = icu;

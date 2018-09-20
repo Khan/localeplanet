@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Српски (Ћирилица, Босна и Херцеговина)" };
 
 })();
+
+module.exports = icu;

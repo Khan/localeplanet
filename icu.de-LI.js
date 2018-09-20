@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Deutsch (Liechtenstein)" };
 
 })();
+
+module.exports = icu;

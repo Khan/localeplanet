@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "dansk (Danmark)" };
 
 })();
+
+module.exports = icu;

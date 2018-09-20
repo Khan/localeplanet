@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ਪੰਜਾਬੀ (Guru, ਭਾਰਤ)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Hausa (Arab, Najeriya)" };
 
 })();
+
+module.exports = icu;

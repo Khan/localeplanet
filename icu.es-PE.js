@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "español (Perú)" };
 
 })();
+
+module.exports = icu;

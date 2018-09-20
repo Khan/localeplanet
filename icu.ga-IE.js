@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Gaeilge (Éire)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "English (New Zealand)" };
 
 })();
+
+module.exports = icu;

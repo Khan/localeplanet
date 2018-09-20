@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Southern Sotho (South Africa)" };
 
 })();
+
+module.exports = icu;

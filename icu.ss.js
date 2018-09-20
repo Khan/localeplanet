@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Swati" };
 
 })();
+
+module.exports = icu;

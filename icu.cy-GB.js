@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Cymraeg (Prydain Fawr)" };
 
 })();
+
+module.exports = icu;

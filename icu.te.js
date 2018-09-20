@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "తెలుగు" };
 
 })();
+
+module.exports = icu;

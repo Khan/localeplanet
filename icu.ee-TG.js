@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "eʋegbe (Togo nutome)" };
 
 })();
+
+module.exports = icu;

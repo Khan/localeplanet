@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "ትግርኛ (ET)" };
 
 })();
+
+module.exports = icu;

@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Kurdish" };
 
 })();
+
+module.exports = icu;

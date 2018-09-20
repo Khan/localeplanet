@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Ўзбек (Cyrl)" };
 
 })();
+
+module.exports = icu;

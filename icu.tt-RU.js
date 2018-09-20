@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "Tatar (Russia)" };
 
 })();
+
+module.exports = icu;

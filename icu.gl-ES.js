@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "galego (España)" };
 
 })();
+
+module.exports = icu;

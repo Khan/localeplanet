@@ -21,3 +21,5 @@
 	icu.getLocaleName = function() { return "eʋegbe" };
 
 })();
+
+module.exports = icu;
