@@ -1,0 +1,19 @@
+{
+  "name": "localeplanet",
+  "version": "1.0.0",
+  "description": "Content is from    http://www.localeplanet.com",
+  "main": "icu.en.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Khan/localeplanet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Khan/localeplanet/issues"
+  },
+  "homepage": "https://github.com/Khan/localeplanet#readme"
+}
