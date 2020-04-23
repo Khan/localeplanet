@@ -25,7 +25,7 @@ def main():
     files_not_updated = []
 
     for file in files:
-        if file.endswith(".js"):
+        if file.endswith(".js") and not file.endswith("__language__.js"):
             file_path = "./" + file
             module_exports_string = 'module.exports = icu;'
             needs_modification = True

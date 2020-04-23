@@ -4,8 +4,10 @@
 	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(d.getFullYear()+'.'+((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1));}},SHORT:function(d){if(d){return(d.getFullYear()+'.'+((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1));}},SHORT_NOYEAR:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(d.getFullYear()+'.'+((d.getMonth()+101)+'').substring(1));}},MEDIUM:function(d){if(d){return(d.getFullYear()+'.'+((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1));}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1));}},LONG_NODAY:function(d){if(d){return(d.getFullYear()+'.'+' '+dfs.month_name[d.getMonth()]);}},LONG:function(d){if(d){return(d.getFullYear()+'.'+' '+dfs.month_name[d.getMonth()]+' '+((d.getDate()+101)+'').substring(1));}},FULL:function(d){if(d){return(d.getFullYear()+'.'+' '+dfs.month_name[d.getMonth()]+' '+((d.getDate()+101)+'').substring(1));}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "BA" };
 	icu.getCountryName = function() { return "Bosna i Hercegovina" };
@@ -20,4 +22,5 @@
 	icu.getLocale = function() { return "hr-BA" };
 	icu.getLocaleName = function() { return "hrvatski (Bosna i Hercegovina)" };
 
+	module.exports = icu;
 })();

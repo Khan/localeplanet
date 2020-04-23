@@ -4,8 +4,10 @@
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(d.getFullYear()+'.'+' '+((d.getMonth()+101)+'').substring(1)+'.'+' '+((d.getDate()+101)+'').substring(1));}},SHORT:function(d){if(d){return((d.getFullYear()+'').substring(2)+'.'+' '+(d.getMonth()+1)+'.'+' '+d.getDate());}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'.'+' '+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getFullYear()+'').substring(2)+'.'+' '+(d.getMonth()+1));}},MEDIUM:function(d){if(d){return(d.getFullYear()+'.'+' '+(d.getMonth()+1)+'.'+' '+d.getDate());}},MEDIUM_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'.'+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+(d.getMonth()+1)+'.'+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(d.getFullYear()+'년'+' '+(d.getMonth()+1)+' '+((d.getDay()+101)+'').substring(1)+')');}},LONG:function(d){if(d){return(d.getFullYear()+'년'+' '+(d.getMonth()+1)+'월'+' '+d.getDate()+'일'+' '+'('+((d.getDay()+101)+'').substring(1)+')');}},FULL:function(d){if(d){return(d.getFullYear()+'년'+' '+(d.getMonth()+1)+'월'+' '+d.getDate()+'일'+' '+dfs.day_name[d.getDay()]);}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "KP" };
 	icu.getCountryName = function() { return "조선민주주의인민공화국" };
@@ -20,4 +22,5 @@
 	icu.getLocale = function() { return "ko-KP" };
 	icu.getLocaleName = function() { return "한국어(조선민주주의인민공화국)" };
 
+	module.exports = icu;
 })();
