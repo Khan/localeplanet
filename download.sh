@@ -16,7 +16,7 @@
 # If you don't, we take it relative to the download.sh script, so
 # you should run this script like './download.sh'.
 
-BABEL_DIR=${1-../../babel/localedata}
+BABEL_DIR=${1-../webapp/third_party/babel/localedata}
 
 locales=`ls "$BABEL_DIR"/*.dat | tr _ - | xargs -n1 basename | sed s/.dat$//`
 for locale in $locales; do
