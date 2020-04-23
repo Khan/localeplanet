@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Swati (South Africa)" };
 
 })();
-
-module.exports = icu;

@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "English (Deseret, United States)" };
 
 })();
-
-module.exports = icu;

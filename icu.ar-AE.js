@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "العربية (الإمارات العربية المتحدة)" };
 
 })();
-
-module.exports = icu;

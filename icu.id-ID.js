@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["AM","PM"],"day_name":["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"],"day_short":["Min","Sen","Sel","Rab","Kam","Jum","Sab"],"era":["SM","M"],"era_name":["SM","M"],"month_name":["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"],"month_short":["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agt","Sep","Okt","Nov","Des"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["AM","PM"],"day_name":["Minggu","Senin","Selasa","Rabu","Kamis","Jumat","Sabtu"],"day_short":["Min","Sen","Sel","Rab","Kam","Jum","Sab"],"era":["SM","M"],"era_name":["Sebelum Masehi","Masehi"],"month_name":["Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember"],"month_short":["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agt","Sep","Okt","Nov","Des"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+' '+dfs.month_short[d.getMonth()]+' '+(d.getFullYear()+'').substring(2));}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+' '+dfs.month_short[d.getMonth()]);}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getDate()+101)+'').substring(1)+' '+dfs.month_short[d.getMonth()]);}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+' '+((d.getDate()+101)+'').substring(1)+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}}};
 	
@@ -16,10 +16,8 @@
 	icu.getDecimalFormatSymbols = function() { return nfs; };
 	icu.getIntegerFormat = function() { var retVal = {}; retVal.format = function(i) { var s = i < 0 ? Math.abs(i).toString() : i.toString(); var rgx = /(\d+)(\d{3})/;while(rgx.test(s)){s = s.replace(rgx, '$1' + nfs["grouping_separator"] + '$2');} return i < 0 ? nfs["minus"] + s : s;}; return retVal; };
 	icu.getLanguage = function() { return "id" };
-	icu.getLanguageName = function() { return "Bahasa Indonesia" };
+	icu.getLanguageName = function() { return "Indonesia" };
 	icu.getLocale = function() { return "id-ID" };
-	icu.getLocaleName = function() { return "Bahasa Indonesia (Indonesia)" };
+	icu.getLocaleName = function() { return "Indonesia (Indonesia)" };
 
 })();
-
-module.exports = icu;

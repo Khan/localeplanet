@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["до полудня","после полудня"],"day_name":["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"],"day_short":["вс","пн","вт","ср","чт","пт","сб"],"era":["до н.э.","н.э."],"era_name":["до н.э.","н.э."],"month_name":["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"],"month_short":["янв.","февр.","марта","апр.","мая","июня","июля","авг.","сент.","окт.","нояб.","дек."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["AM","PM"],"day_name":["воскресенье","понедельник","вторник","среда","четверг","пятница","суббота"],"day_short":["вс","пн","вт","ср","чт","пт","сб"],"era":["до н. э.","н. э."],"era_name":["до Рождества Христова","от Рождества Христова"],"month_name":["января","февраля","марта","апреля","мая","июня","июля","августа","сентября","октября","ноября","декабря"],"month_short":["янв.","февр.","мар.","апр.","мая","июн.","июл.","авг.","сент.","окт.","нояб.","дек."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":" ","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'.'+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear()+' '+'г.');}},LONG:function(d){if(d){return(d.getDate()+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear()+' '+'г.');}},FULL:function(d){if(d){return(d.getDate()+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear()+' '+'г.');}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "русский (Украина)" };
 
 })();
-
-module.exports = icu;

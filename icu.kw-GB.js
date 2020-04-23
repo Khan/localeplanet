@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["a.m.","p.m."],"day_name":["De Sul","De Lun","De Merth","De Merher","De Yow","De Gwener","De Sadorn"],"day_short":["Sul","Lun","Mth","Mhr","Yow","Gwe","Sad"],"era":["RC","AD"],"era_name":["RC","AD"],"month_name":["Mys Genver","Mys Whevrel","Mys Merth","Mys Ebrel","Mys Me","Mys Efan","Mys Gortheren","Mye Est","Mys Gwyngala","Mys Hedra","Mys Du","Mys Kevardhu"],"month_short":["Gen","Whe","Mer","Ebr","Me","Efn","Gor","Est","Gwn","Hed","Du","Kev"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
+	var dfs = {"am_pm":["a.m.","p.m."],"day_name":["dy Sul","dy Lun","dy Meurth","dy Merher","dy Yow","dy Gwener","dy Sadorn"],"day_short":["Sul","Lun","Mth","Mhr","Yow","Gwe","Sad"],"era":["RC","AD"],"era_name":["RC","AD"],"month_name":["mis Genver","mis Hwevrer","mis Meurth","mis Ebrel","mis Me","mis Metheven","mis Gortheren","mis Est","mis Gwynngala","mis Hedra","mis Du","mis Kevardhu"],"month_short":["Gen","Hwe","Meu","Ebr","Me","Met","Gor","Est","Gwn","Hed","Du","Kev"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "kernewek (Rywvaneth Unys)" };
 
 })();
-
-module.exports = icu;

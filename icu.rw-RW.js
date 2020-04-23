@@ -8,7 +8,7 @@
 	var icu = window.icu;	
 		
 	icu.getCountry = function() { return "RW" };
-	icu.getCountryName = function() { return "Rwanda" };
+	icu.getCountryName = function() { return "U Rwanda" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
 	icu.getDateFormats = function() { return df; };
 	icu.getDateFormatSymbols = function() { return dfs; };
@@ -18,8 +18,6 @@
 	icu.getLanguage = function() { return "rw" };
 	icu.getLanguageName = function() { return "Kinyarwanda" };
 	icu.getLocale = function() { return "rw-RW" };
-	icu.getLocaleName = function() { return "Kinyarwanda (Rwanda)" };
+	icu.getLocaleName = function() { return "Kinyarwanda (U Rwanda)" };
 
 })();
-
-module.exports = icu;

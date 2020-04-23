@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "English (Namibia)" };
 
 })();
-
-module.exports = icu;

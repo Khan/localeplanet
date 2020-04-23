@@ -8,7 +8,7 @@
 	var icu = window.icu;	
 		
 	icu.getCountry = function() { return "UM" };
-	icu.getCountryName = function() { return "U.S. Minor Outlying Islands" };
+	icu.getCountryName = function() { return "U.S. Outlying Islands" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
 	icu.getDateFormats = function() { return df; };
 	icu.getDateFormatSymbols = function() { return dfs; };
@@ -18,8 +18,6 @@
 	icu.getLanguage = function() { return "en" };
 	icu.getLanguageName = function() { return "English" };
 	icu.getLocale = function() { return "en-UM" };
-	icu.getLocaleName = function() { return "English (U.S. Minor Outlying Islands)" };
+	icu.getLocaleName = function() { return "English (U.S. Outlying Islands)" };
 
 })();
-
-module.exports = icu;

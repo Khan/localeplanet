@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "South Ndebele (South Africa)" };
 
 })();
-
-module.exports = icu;

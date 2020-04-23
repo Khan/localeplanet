@@ -16,10 +16,8 @@
 	icu.getDecimalFormatSymbols = function() { return nfs; };
 	icu.getIntegerFormat = function() { var retVal = {}; retVal.format = function(i) { var s = i < 0 ? Math.abs(i).toString() : i.toString(); var rgx = /(\d+)(\d{3})/;while(rgx.test(s)){s = s.replace(rgx, '$1' + nfs["grouping_separator"] + '$2');} return i < 0 ? nfs["minus"] + s : s;}; return retVal; };
 	icu.getLanguage = function() { return "wal" };
-	icu.getLanguageName = function() { return "Walamo" };
+	icu.getLanguageName = function() { return "Wolaytta" };
 	icu.getLocale = function() { return "null" };
-	icu.getLocaleName = function() { return "Walamo" };
+	icu.getLocaleName = function() { return "Wolaytta" };
 
 })();
-
-module.exports = icu;

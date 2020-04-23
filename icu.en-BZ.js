@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "English (Belize)" };
 
 })();
-
-module.exports = icu;

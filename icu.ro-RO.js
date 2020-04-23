@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["AM","PM"],"day_name":["duminică","luni","marți","miercuri","joi","vineri","sâmbătă"],"day_short":["Du","Lu","Ma","Mi","Jo","Vi","Sâ"],"era":["î.Hr.","d.Hr."],"era_name":["înainte de Hristos","după Hristos"],"month_name":["ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"],"month_short":["ian.","feb.","mar.","apr.","mai","iun.","iul.","aug.","sept.","oct.","nov.","dec."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["a.m.","p.m."],"day_name":["duminică","luni","marți","miercuri","joi","vineri","sâmbătă"],"day_short":["dum.","lun.","mar.","mie.","joi","vin.","sâm."],"era":["î.Hr.","d.Hr."],"era_name":["înainte de Hristos","după Hristos"],"month_name":["ianuarie","februarie","martie","aprilie","mai","iunie","iulie","august","septembrie","octombrie","noiembrie","decembrie"],"month_short":["ian.","feb.","mar.","apr.","mai","iun.","iul.","aug.","sept.","oct.","nov.","dec."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},MEDIUM:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "română (România)" };
 
 })();
-
-module.exports = icu;

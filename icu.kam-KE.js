@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Kikamba (Kenya)" };
 
 })();
-
-module.exports = icu;

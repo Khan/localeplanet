@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Blin" };
 
 })();
-
-module.exports = icu;

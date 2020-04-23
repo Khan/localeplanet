@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["vorm.","nachm."],"day_name":["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"],"day_short":["So.","Mo.","Di.","Mi.","Do.","Fr.","Sa."],"era":["v. Chr.","n. Chr."],"era_name":["v. Chr.","n. Chr."],"month_name":["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],"month_short":["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["vorm.","nachm."],"day_name":["Sonntag","Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag"],"day_short":["So.","Mo.","Di.","Mi.","Do.","Fr.","Sa."],"era":["v. Chr.","n. Chr."],"era_name":["v. Chr.","n. Chr."],"month_name":["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],"month_short":["Jan.","Feb.","März","Apr.","Mai","Juni","Juli","Aug.","Sep.","Okt.","Nov.","Dez."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'.'+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(d.getDate()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getDate()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Deutsch" };
 
 })();
-
-module.exports = icu;

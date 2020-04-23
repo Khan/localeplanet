@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "français (France)" };
 
 })();
-
-module.exports = icu;

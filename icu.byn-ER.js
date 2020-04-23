@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Blin (Eritrea)" };
 
 })();
-
-module.exports = icu;

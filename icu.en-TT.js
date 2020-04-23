@@ -8,7 +8,7 @@
 	var icu = window.icu;	
 		
 	icu.getCountry = function() { return "TT" };
-	icu.getCountryName = function() { return "Trinidad and Tobago" };
+	icu.getCountryName = function() { return "Trinidad & Tobago" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
 	icu.getDateFormats = function() { return df; };
 	icu.getDateFormatSymbols = function() { return dfs; };
@@ -18,8 +18,6 @@
 	icu.getLanguage = function() { return "en" };
 	icu.getLanguageName = function() { return "English" };
 	icu.getLocale = function() { return "en-TT" };
-	icu.getLocaleName = function() { return "English (Trinidad and Tobago)" };
+	icu.getLocaleName = function() { return "English (Trinidad & Tobago)" };
 
 })();
-
-module.exports = icu;

@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Tigre (Eritrea)" };
 
 })();
-
-module.exports = icu;

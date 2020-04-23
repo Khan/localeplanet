@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["de.","du."],"day_name":["vasárnap","hétfő","kedd","szerda","csütörtök","péntek","szombat"],"day_short":["V","H","K","Sze","Cs","P","Szo"],"era":["i. e.","i. sz."],"era_name":["időszámításunk előtt","időszámításunk szerint"],"month_name":["január","február","március","április","május","június","július","augusztus","szeptember","október","november","december"],"month_short":["jan.","febr.","márc.","ápr.","máj.","jún.","júl.","aug.","szept.","okt.","nov.","dec."],"order_full":"YMD","order_long":"YMD","order_medium":"YMD","order_short":"YMD"};
+	var dfs = {"am_pm":["de.","du."],"day_name":["vasárnap","hétfő","kedd","szerda","csütörtök","péntek","szombat"],"day_short":["V","H","K","Sze","Cs","P","Szo"],"era":["i. e.","i. sz."],"era_name":["Krisztus előtt","időszámításunk szerint"],"month_name":["január","február","március","április","május","június","július","augusztus","szeptember","október","november","december"],"month_short":["jan.","febr.","márc.","ápr.","máj.","jún.","júl.","aug.","szept.","okt.","nov.","dec."],"order_full":"YMD","order_long":"YMD","order_medium":"YMD","order_short":"YMD"};
 	var nfs = {"decimal_separator":",","grouping_separator":" ","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(d.getFullYear()+'.'+((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1)+'.');}},SHORT:function(d){if(d){return(d.getFullYear()+'.'+((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1)+'.');}},SHORT_NOYEAR:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1)+'.');}},SHORT_NODAY:function(d){if(d){return(d.getFullYear()+'.'+((d.getMonth()+101)+'').substring(1));}},MEDIUM:function(d){if(d){return(d.getFullYear()+'.'+((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1)+'.');}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1)+'.');}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getMonth()+101)+'').substring(1)+'.'+((d.getDate()+101)+'').substring(1)+'.');}},LONG_NODAY:function(d){if(d){return(d.getFullYear()+'.'+' '+dfs.month_name[d.getMonth()]);}},LONG:function(d){if(d){return(d.getFullYear()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+'.');}},FULL:function(d){if(d){return(d.getFullYear()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+'.');}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "magyar" };
 
 })();
-
-module.exports = icu;

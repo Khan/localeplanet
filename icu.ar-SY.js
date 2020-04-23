@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "العربية (سوريا)" };
 
 })();
-
-module.exports = icu;

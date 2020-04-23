@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "esperanto" };
 
 })();
-
-module.exports = icu;

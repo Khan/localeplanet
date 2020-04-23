@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Igbo" };
 
 })();
-
-module.exports = icu;

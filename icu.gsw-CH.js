@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["vorm.","nam."],"day_name":["Sunntig","Määntig","Ziischtig","Mittwuch","Dunschtig","Friitig","Samschtig"],"day_short":["Su.","Mä.","Zi.","Mi.","Du.","Fr.","Sa."],"era":["v. Chr.","n. Chr."],"era_name":["v. Chr.","n. Chr."],"month_name":["Januar","Februar","März","April","Mai","Juni","Juli","Auguscht","Septämber","Oktoober","Novämber","Dezämber"],"month_short":["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
+	var dfs = {"am_pm":["am Vormittag","am Namittag"],"day_name":["Sunntig","Määntig","Ziischtig","Mittwuch","Dunschtig","Friitig","Samschtig"],"day_short":["Su.","Mä.","Zi.","Mi.","Du.","Fr.","Sa."],"era":["v. Chr.","n. Chr."],"era_name":["v. Chr.","n. Chr."],"month_name":["Januar","Februar","März","April","Mai","Juni","Juli","Auguscht","Septämber","Oktoober","Novämber","Dezämber"],"month_short":["Jan","Feb","Mär","Apr","Mai","Jun","Jul","Aug","Sep","Okt","Nov","Dez"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
 	var nfs = {"decimal_separator":".","grouping_separator":"\u2019","minus":"−"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Schwiizertüütsch (Schwiiz)" };
 
 })();
-
-module.exports = icu;

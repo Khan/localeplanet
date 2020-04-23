@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Northern Sotho (South Africa)" };
 
 })();
-
-module.exports = icu;

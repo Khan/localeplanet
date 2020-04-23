@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["дп","пп"],"day_name":["Неділя","Понеділок","Вівторок","Середа","Четвер","Пʼятниця","Субота"],"day_short":["Нд","Пн","Вт","Ср","Чт","Пт","Сб"],"era":["до н.е.","н.е."],"era_name":["до нашої ери","нашої ери"],"month_name":["січня","лютого","березня","квітня","травня","червня","липня","серпня","вересня","жовтня","листопада","грудня"],"month_short":["січ.","лют.","бер.","квіт.","трав.","черв.","лип.","серп.","вер.","жовт.","лист.","груд."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["дп","пп"],"day_name":["неділя","понеділок","вівторок","середа","четвер","пʼятниця","субота"],"day_short":["нд","пн","вт","ср","чт","пт","сб"],"era":["до н. е.","н. е."],"era_name":["до нашої ери","нашої ери"],"month_name":["січня","лютого","березня","квітня","травня","червня","липня","серпня","вересня","жовтня","листопада","грудня"],"month_short":["січ.","лют.","бер.","квіт.","трав.","черв.","лип.","серп.","вер.","жовт.","лист.","груд."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":" ","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'.'+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(d.getDate()+' '+dfs.month_short[d.getMonth()]+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(d.getDate()+' '+dfs.month_short[d.getMonth()]);}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+d.getDate()+' '+dfs.month_short[d.getMonth()]);}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(d.getDate()+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getDate()+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear()+' '+'р'+'.');}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "українська (Україна)" };
 
 })();
-
-module.exports = icu;

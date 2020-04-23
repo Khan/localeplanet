@@ -8,7 +8,7 @@
 	var icu = window.icu;	
 		
 	icu.getCountry = function() { return "CD" };
-	icu.getCountryName = function() { return "Repibiki demokratiki ya Kongó" };
+	icu.getCountryName = function() { return "Republíki ya Kongó Demokratíki" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
 	icu.getDateFormats = function() { return df; };
 	icu.getDateFormatSymbols = function() { return dfs; };
@@ -18,8 +18,6 @@
 	icu.getLanguage = function() { return "ln" };
 	icu.getLanguageName = function() { return "lingála" };
 	icu.getLocale = function() { return "ln-CD" };
-	icu.getLocaleName = function() { return "lingála (Repibiki demokratiki ya Kongó)" };
+	icu.getLocaleName = function() { return "lingála (Republíki ya Kongó Demokratíki)" };
 
 })();
-
-module.exports = icu;

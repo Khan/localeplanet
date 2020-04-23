@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Afar" };
 
 })();
-
-module.exports = icu;

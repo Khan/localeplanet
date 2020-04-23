@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["পূৰ্বাহ্ণ","অপৰাহ্ণ"],"day_name":["দেওবাৰ","সোমবাৰ","মঙ্গলবাৰ","বুধবাৰ","বৃহষ্পতিবাৰ","শুক্ৰবাৰ","শনিবাৰ"],"day_short":["ৰবি","সোম","মঙ্গল","বুধ","বৃহষ্পতি","শুক্ৰ","শনি"],"era":["BCE","CE"],"era_name":["BCE","CE"],"month_name":["জানুৱাৰী","ফেব্ৰুৱাৰী","মাৰ্চ","এপ্ৰিল","মে","জুন","জুলাই","আগষ্ট","ছেপ্তেম্বৰ","অক্টোবৰ","নৱেম্বৰ","ডিচেম্বৰ"],"month_short":["জানু","ফেব্ৰু","মাৰ্চ","এপ্ৰিল","মে","জুন","জুলাই","আগ","সেপ্ট","অক্টো","নভে","ডিসে"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
+	var dfs = {"am_pm":["পূৰ্বাহ্ণ","অপৰাহ্ণ"],"day_name":["দেওবাৰ","সোমবাৰ","মঙ্গলবাৰ","বুধবাৰ","বৃহস্পতিবাৰ","শুক্ৰবাৰ","শনিবাৰ"],"day_short":["দেও","সোম","মঙ্গল","বুধ","বৃহ","শুক্ৰ","শনি"],"era":["খ্ৰী.পূ.","খ্ৰী.দ."],"era_name":["খ্ৰীষ্টপূৰ্ব","খ্ৰীষ্টাব্দ"],"month_name":["জানুৱাৰী","ফেব্ৰুৱাৰী","মাৰ্চ","এপ্ৰিল","মে\u2019","জুন","জুলাই","আগষ্ট","ছেপ্তেম্বৰ","অক্টোবৰ","নৱেম্বৰ","ডিচেম্বৰ"],"month_short":["জানু","ফেব্ৰু","মাৰ্চ","এপ্ৰিল","মে\u2019","জুন","জুলাই","আগ","ছেপ্তে","অক্টো","নৱে","ডিচে"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "অসমীয়া" };
 
 })();
-
-module.exports = icu;

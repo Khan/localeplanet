@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "English (Hong Kong SAR China)" };
 
 })();
-
-module.exports = icu;

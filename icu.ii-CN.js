@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "ꆈꌠꉙ (ꍏꇩ)" };
 
 })();
-
-module.exports = icu;

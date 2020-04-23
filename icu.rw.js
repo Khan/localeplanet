@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Kinyarwanda" };
 
 })();
-
-module.exports = icu;

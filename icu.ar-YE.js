@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "العربية (اليمن)" };
 
 })();
-
-module.exports = icu;

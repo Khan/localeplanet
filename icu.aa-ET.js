@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Afar (Ethiopia)" };
 
 })();
-
-module.exports = icu;

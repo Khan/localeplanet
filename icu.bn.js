@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["পূর্বাহ্ণ","অপরাহ্ণ"],"day_name":["রবিবার","সোমবার","মঙ্গলবার","বুধবার","বৃহষ্পতিবার","শুক্রবার","শনিবার"],"day_short":["রবি","সোম","মঙ্গল","বুধ","বৃহস্পতি","শুক্র","শনি"],"era":["খৃষ্টপূর্ব","খৃষ্টাব্দ"],"era_name":["খৃষ্টপূর্ব","খৃষ্টাব্দ"],"month_name":["জানুয়ারী","ফেব্রুয়ারী","মার্চ","এপ্রিল","মে","জুন","জুলাই","আগস্ট","সেপ্টেম্বর","অক্টোবর","নভেম্বর","ডিসেম্বর"],"month_short":["জানুয়ারী","ফেব্রুয়ারী","মার্চ","এপ্রিল","মে","জুন","জুলাই","আগস্ট","সেপ্টেম্বর","অক্টোবর","নভেম্বর","ডিসেম্বর"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
+	var dfs = {"am_pm":["AM","PM"],"day_name":["রবিবার","সোমবার","মঙ্গলবার","বুধবার","বৃহস্পতিবার","শুক্রবার","শনিবার"],"day_short":["রবি","সোম","মঙ্গল","বুধ","বৃহস্পতি","শুক্র","শনি"],"era":["খ্রিস্টপূর্ব","খৃষ্টাব্দ"],"era_name":["খ্রিস্টপূর্ব","খ্রীষ্টাব্দ"],"month_name":["জানুয়ারী","ফেব্রুয়ারী","মার্চ","এপ্রিল","মে","জুন","জুলাই","আগস্ট","সেপ্টেম্বর","অক্টোবর","নভেম্বর","ডিসেম্বর"],"month_short":["জানু","ফেব","মার্চ","এপ্রিল","মে","জুন","জুলাই","আগস্ট","সেপ্টেম্বর","অক্টোবর","নভেম্বর","ডিসেম্বর"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "বাংলা" };
 
 })();
-
-module.exports = icu;

@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "kalaallisut" };
 
 })();
-
-module.exports = icu;

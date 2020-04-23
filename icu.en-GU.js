@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "English (Guam)" };
 
 })();
-
-module.exports = icu;

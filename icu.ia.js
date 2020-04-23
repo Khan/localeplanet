@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Interlingua" };
 
 })();
-
-module.exports = icu;

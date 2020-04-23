@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["dopoludnia","popoludní"],"day_name":["nedeľa","pondelok","utorok","streda","štvrtok","piatok","sobota"],"day_short":["ne","po","ut","st","št","pi","so"],"era":["pred n.l.","n.l."],"era_name":["pred n.l.","n.l."],"month_name":["januára","februára","marca","apríla","mája","júna","júla","augusta","septembra","októbra","novembra","decembra"],"month_short":["jan","feb","mar","apr","máj","jún","júl","aug","sep","okt","nov","dec"],"order_full":"YMD","order_long":"YMD","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["AM","PM"],"day_name":["nedeľa","pondelok","utorok","streda","štvrtok","piatok","sobota"],"day_short":["ne","po","ut","st","št","pi","so"],"era":["pred Kr.","po Kr."],"era_name":["pred Kristom","po Kristovi"],"month_name":["januára","februára","marca","apríla","mája","júna","júla","augusta","septembra","októbra","novembra","decembra"],"month_short":["jan","feb","mar","apr","máj","jún","júl","aug","sep","okt","nov","dec"],"order_full":"YMD","order_long":"YMD","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":" ","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear());}},SHORT_NOYEAR:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1));}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+'.'+d.getFullYear());}},MEDIUM:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+d.getDate()+'.'+(d.getMonth()+1));}},LONG_NODAY:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getFullYear()+','+' '+dfs.month_name[d.getMonth()]);}},LONG:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getFullYear()+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getFullYear()+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate());}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "slovenčina" };
 
 })();
-
-module.exports = icu;

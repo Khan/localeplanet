@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "français (Sénégal)" };
 
 })();
-
-module.exports = icu;

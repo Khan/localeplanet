@@ -18,8 +18,6 @@
 	icu.getLanguage = function() { return "zh" };
 	icu.getLanguageName = function() { return "中文" };
 	icu.getLocale = function() { return "zh-Hans-SG" };
-	icu.getLocaleName = function() { return "中文（简体中文、新加坡）" };
+	icu.getLocaleName = function() { return "中文（简体，新加坡）" };
 
 })();
-
-module.exports = icu;

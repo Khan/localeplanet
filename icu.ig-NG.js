@@ -8,7 +8,7 @@
 	var icu = window.icu;	
 		
 	icu.getCountry = function() { return "NG" };
-	icu.getCountryName = function() { return "Nigeria" };
+	icu.getCountryName = function() { return "Naịjịrịa" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
 	icu.getDateFormats = function() { return df; };
 	icu.getDateFormatSymbols = function() { return dfs; };
@@ -18,8 +18,6 @@
 	icu.getLanguage = function() { return "ig" };
 	icu.getLanguageName = function() { return "Igbo" };
 	icu.getLocale = function() { return "ig-NG" };
-	icu.getLocaleName = function() { return "Igbo (Nigeria)" };
+	icu.getLocaleName = function() { return "Igbo (Naịjịrịa)" };
 
 })();
-
-module.exports = icu;

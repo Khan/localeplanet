@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Swati (Swaziland)" };
 
 })();
-
-module.exports = icu;

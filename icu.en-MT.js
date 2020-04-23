@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "English (Malta)" };
 
 })();
-
-module.exports = icu;

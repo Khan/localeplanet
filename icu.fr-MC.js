@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "français (Monaco)" };
 
 })();
-
-module.exports = icu;

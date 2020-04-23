@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "ʻŌlelo Hawaiʻi (ʻAmelika Hui Pū ʻIa)" };
 
 })();
-
-module.exports = icu;

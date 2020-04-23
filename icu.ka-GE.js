@@ -1,7 +1,7 @@
 (function() {
 
-	var dfs = {"am_pm":["AM","PM"],"day_name":["კვირა","2","სამშაბათი","ოთხშაბათი","ხუთშაბათი","პარასკევი","შაბათი"],"day_short":["კვირა","ორშ","სამ","ოთხ","ხუთ","პარ","შაბ"],"era":["ჩვენს წელთაღრიცხვამდე","ჩვენი წელთაღრიცხვით"],"era_name":["ჩვენს წელთაღრიცხვამდე","ჩვენი წელთაღრიცხვით"],"month_name":["იანვარი","თებერვალი","მარტი","აპრილი","მაისი","ივნისი","ივლის","აგვისტო","სექტემბერი","ოქტომბერი","ნოემბერი","დეკემბერი"],"month_short":["იან","თებ","მარ","აპრ","მაი","ივნ","ივლ","აგვ","სექ","ოქტ","ნოე","დეკ"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
-	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
+	var dfs = {"am_pm":["AM","PM"],"day_name":["კვირა","ორშაბათი","სამშაბათი","ოთხშაბათი","ხუთშაბათი","პარასკევი","შაბათი"],"day_short":["კვი","ორშ","სამ","ოთხ","ხუთ","პარ","შაბ"],"era":["ძვ. წ.","ახ. წ."],"era_name":["ძველი წელთაღრიცხვით","ახალი წელთაღრიცხვით"],"month_name":["იანვარი","თებერვალი","მარტი","აპრილი","მაისი","ივნისი","ივლისი","აგვისტო","სექტემბერი","ოქტომბერი","ნოემბერი","დეკემბერი"],"month_short":["იან","თებ","მარ","აპრ","მაი","ივნ","ივლ","აგვ","სექ","ოქტ","ნოე","დეკ"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
+	var nfs = {"decimal_separator":",","grouping_separator":" ","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
 	
 	window.icu = window.icu || new Object();
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "ქართული (საქართველო)" };
 
 })();
-
-module.exports = icu;

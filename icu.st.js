@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Southern Sotho" };
 
 })();
-
-module.exports = icu;

@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["pre podne","popodne"],"day_name":["nedjelja","ponedjeljak","utorak","srijeda","četvrtak","petak","subota"],"day_short":["ned","pon","uto","sri","čet","pet","sub"],"era":["p. n. e.","n. e"],"era_name":["Pre nove ere","Nove ere"],"month_name":["januar","februar","mart","april","maj","juni","juli","avgust","septembar","oktobar","novembar","decembar"],"month_short":["jan","feb","mar","apr","maj","jun","jul","avg","sep","okt","nov","dec"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
+	var dfs = {"am_pm":["prijepodne","popodne"],"day_name":["nedjelja","ponedjeljak","utorak","srijeda","četvrtak","petak","subota"],"day_short":["ned","pon","uto","sri","čet","pet","sub"],"era":["p. n. e.","n. e."],"era_name":["prije nove ere","nove ere"],"month_name":["januar","februar","mart","april","maj","juni","juli","avgust","septembar","oktobar","novembar","decembar"],"month_short":["jan","feb","mar","apr","maj","jun","jul","avg","sep","okt","nov","dec"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
 	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "bosanski" };
 
 })();
-
-module.exports = icu;

@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "English (Pakistan)" };
 
 })();
-
-module.exports = icu;

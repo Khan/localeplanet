@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["dop.","odp."],"day_name":["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"],"day_short":["ne","po","út","st","čt","pá","so"],"era":["př. n. l.","n. l."],"era_name":["př. n. l.","n. l."],"month_name":["ledna","února","března","dubna","května","června","července","srpna","září","října","listopadu","prosince"],"month_short":["Led","Úno","Bře","Dub","Kvě","Čer","Čvc","Srp","Zář","Říj","Lis","Pro"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["dop.","odp."],"day_name":["neděle","pondělí","úterý","středa","čtvrtek","pátek","sobota"],"day_short":["ne","po","út","st","čt","pá","so"],"era":["př. n. l.","n. l."],"era_name":["před naším letopočtem","našeho letopočtu"],"month_name":["ledna","února","března","dubna","května","června","července","srpna","září","října","listopadu","prosince"],"month_short":["led","úno","bře","dub","kvě","čvn","čvc","srp","zář","říj","lis","pro"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":" ","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1)+'.'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1));}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+'.'+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+d.getDate()+'.'+(d.getMonth()+1));}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(d.getDate()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getDate()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}}};
 	
@@ -8,7 +8,7 @@
 	var icu = window.icu;	
 		
 	icu.getCountry = function() { return "CZ" };
-	icu.getCountryName = function() { return "Česká republika" };
+	icu.getCountryName = function() { return "Česko" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
 	icu.getDateFormats = function() { return df; };
 	icu.getDateFormatSymbols = function() { return dfs; };
@@ -18,8 +18,6 @@
 	icu.getLanguage = function() { return "cs" };
 	icu.getLanguageName = function() { return "čeština" };
 	icu.getLocale = function() { return "cs-CZ" };
-	icu.getLocaleName = function() { return "čeština (Česká republika)" };
+	icu.getLocaleName = function() { return "čeština (Česko)" };
 
 })();
-
-module.exports = icu;

@@ -1,6 +1,6 @@
 (function() {
 
-	var dfs = {"am_pm":["a.m.","p.m."],"day_name":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],"day_short":["dom","lun","mar","mié","jue","vie","sáb"],"era":["a.C.","d.C."],"era_name":["antes de Cristo","anno Dómini"],"month_name":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"month_short":["ene","feb","mar","abr","may","jun","jul","ago","sep","oct","nov","dic"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["a. m.","p. m."],"day_name":["domingo","lunes","martes","miércoles","jueves","viernes","sábado"],"day_short":["dom.","lun.","mar.","mié.","jue.","vie.","sáb."],"era":["a. C.","d. C."],"era_name":["antes de Cristo","después de Cristo"],"month_name":["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"],"month_short":["ene.","feb.","mar.","abr.","may.","jun.","jul.","ago.","sep.","oct.","nov.","dic."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return(d.getDate()+'/'+((d.getMonth()+101)+'').substring(1)+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return(d.getDate()+'/'+((d.getMonth()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(d.getDate()+'/'+((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(d.getDate()+'/'+((d.getMonth()+101)+'').substring(1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+d.getDate()+'/'+((d.getMonth()+101)+'').substring(1));}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' de '+d.getFullYear());}},LONG:function(d){if(d){return(d.getDate()+' de '+dfs.month_name[d.getMonth()]+' de '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+' '+d.getDate()+' de '+dfs.month_name[d.getMonth()]+' de '+d.getFullYear());}}};
 	
@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "español (Colombia)" };
 
 })();
-
-module.exports = icu;

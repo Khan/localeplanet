@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "العربية (مصر)" };
 
 })();
-
-module.exports = icu;

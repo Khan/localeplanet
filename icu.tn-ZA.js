@@ -21,5 +21,3 @@
 	icu.getLocaleName = function() { return "Tswana (South Africa)" };
 
 })();
-
-module.exports = icu;
