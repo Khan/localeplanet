@@ -28,6 +28,9 @@ done
 # Also add the __language__ symlink which is the scheme we use to
 # select the right js file to include in our javascript package
 # system.
-ln -snf icu-en.js icu.__language__.js
+# NOTE(somewhatabstract): Pretty sure this isn't used since it was symlinking
+# to icu-en.js but we use icu.en.js. Likely this is outdated but I fixed it
+# anyway.
+ln -snf icu.en.js icu.__language__.js
 
 echo "DONE"
