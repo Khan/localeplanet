@@ -3,10 +3,12 @@
 	var dfs = {"am_pm":["PG","PTG"],"day_name":["Ahad","Isnin","Selasa","Rabu","Khamis","Jumaat","Sabtu"],"day_short":["Ahd","Isn","Sel","Rab","Kha","Jum","Sab"],"era":["S.M.","TM"],"era_name":["S.M.","TM"],"month_name":["Januari","Februari","Mac","April","Mei","Jun","Julai","Ogos","September","Oktober","November","Disember"],"month_short":["Jan","Feb","Mac","Apr","Mei","Jun","Jul","Ogos","Sep","Okt","Nov","Dis"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},MEDIUM:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+' '+dfs.month_name[d.getMonth()]);}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getDate()+101)+'').substring(1)+' '+dfs.month_name[d.getMonth()]);}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+' '+((d.getDate()+101)+'').substring(1)+' '+dfs.month_short[d.getMonth()]+' '+d.getFullYear());}}};
-	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
-		
+
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
+
 	icu.getCountry = function() { return "MY" };
 	icu.getCountryName = function() { return "Malaysia" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
@@ -20,6 +22,5 @@
 	icu.getLocale = function() { return "ms-MY" };
 	icu.getLocaleName = function() { return "Bahasa Melayu (Malaysia)" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

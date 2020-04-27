@@ -3,10 +3,12 @@
 	var dfs = {"am_pm":["AM","PM"],"day_name":["bazar","bazar ertəsi","çərşənbə axşamı","çərşənbə","cümə axşamı","cümə","şənbə"],"day_short":["B.","B.E.","Ç.A.","Ç.","C.A.","C","Ş."],"era":["e.ə.","b.e."],"era_name":["eramızdan əvvəl","bizim eramızın"],"month_name":["Yanvar","Fevral","Mart","Aprel","May","İyun","İyul","Avqust","Sentyabr","Oktyabr","Noyabr","Dekabr"],"month_short":["yan","fev","mar","apr","may","iyn","iyl","avq","sen","okt","noy","dek"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
 	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
-	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
-		
+
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
+
 	icu.getCountry = function() { return "AZ" };
 	icu.getCountryName = function() { return "Azərbaycan" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
@@ -20,6 +22,5 @@
 	icu.getLocale = function() { return "null" };
 	icu.getLocaleName = function() { return "azərbaycanca (Azərbaycan)" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;
