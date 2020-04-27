@@ -1,11 +1,13 @@
 (function() {
 
-	var dfs = {"am_pm":["AM","PM"],"day_name":["Dydd Sul","Dydd Llun","Dydd Mawrth","Dydd Mercher","Dydd Iau","Dydd Gwener","Dydd Sadwrn"],"day_short":["Sul","Llun","Maw","Mer","Iau","Gwen","Sad"],"era":["CC","OC"],"era_name":["Cyn Crist","Oed Crist"],"month_name":["Ionawr","Chwefror","Mawrth","Ebrill","Mai","Mehefin","Gorffenaf","Awst","Medi","Hydref","Tachwedd","Rhagfyr"],"month_short":["Ion","Chwef","Mawrth","Ebrill","Mai","Meh","Gorff","Awst","Medi","Hyd","Tach","Rhag"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
+	var dfs = {"am_pm":["yb","yh"],"day_name":["Dydd Sul","Dydd Llun","Dydd Mawrth","Dydd Mercher","Dydd Iau","Dydd Gwener","Dydd Sadwrn"],"day_short":["Sul","Llun","Maw","Mer","Iau","Gwen","Sad"],"era":["CC","OC"],"era_name":["Cyn Crist","Oed Crist"],"month_name":["Ionawr","Chwefror","Mawrth","Ebrill","Mai","Mehefin","Gorffennaf","Awst","Medi","Hydref","Tachwedd","Rhagfyr"],"month_short":["Ion","Chwef","Maw","Ebrill","Mai","Meh","Gorff","Awst","Medi","Hyd","Tach","Rhag"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "" };
 	icu.getCountryName = function() { return "" };
@@ -20,6 +22,5 @@
 	icu.getLocale = function() { return "cy" };
 	icu.getLocaleName = function() { return "Cymraeg" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

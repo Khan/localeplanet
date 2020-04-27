@@ -1,11 +1,13 @@
 (function() {
 
-	var dfs = {"am_pm":["f.h.","e.h."],"day_name":["sunnudagur","mánudagur","þriðjudagur","miðvikudagur","fimmtudagur","föstudagur","laugardagur"],"day_short":["sun","mán","þri","mið","fim","fös","lau"],"era":["fyrir Krist","eftir Krist"],"era_name":["fyrir Krist","eftir Krist"],"month_name":["janúar","febrúar","mars","apríl","maí","júní","júlí","ágúst","september","október","nóvember","desember"],"month_short":["jan","feb","mar","apr","maí","jún","júl","ágú","sep","okt","nóv","des"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
-	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"−"};
+	var dfs = {"am_pm":["f.h.","e.h."],"day_name":["sunnudagur","mánudagur","þriðjudagur","miðvikudagur","fimmtudagur","föstudagur","laugardagur"],"day_short":["sun.","mán.","þri.","mið.","fim.","fös.","lau."],"era":["f.Kr.","e.Kr."],"era_name":["fyrir Krist","eftir Krist"],"month_name":["janúar","febrúar","mars","apríl","maí","júní","júlí","ágúst","september","október","nóvember","desember"],"month_short":["jan.","feb.","mar.","apr.","maí","jún.","júl.","ágú.","sep.","okt.","nóv.","des."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear());}},SHORT_NOYEAR:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1));}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+'.'+d.getFullYear());}},MEDIUM:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+d.getDate()+'.'+(d.getMonth()+1));}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(d.getDate()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(d.getDate()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "" };
 	icu.getCountryName = function() { return "" };
@@ -20,6 +22,5 @@
 	icu.getLocale = function() { return "is" };
 	icu.getLocaleName = function() { return "íslenska" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

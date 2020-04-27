@@ -1,14 +1,16 @@
 (function() {
 
-	var dfs = {"am_pm":["PD","MD"],"day_name":["e diel","e hënë","e martë","e mërkurë","e enjte","e premte","e shtunë"],"day_short":["Die","Hën","Mar","Mër","Enj","Pre","Sht"],"era":["p.e.r.","n.e.r."],"era_name":["p.e.r.","n.e.r."],"month_name":["janar","shkurt","mars","prill","maj","qershor","korrik","gusht","shtator","tetor","nëntor","dhjetor"],"month_short":["Jan","Shk","Mar","Pri","Maj","Qer","Kor","Gsh","Sht","Tet","Nën","Dhj"],"order_full":"YMD","order_long":"YMD","order_medium":"YMD","order_short":"YMD"};
-	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
+	var dfs = {"am_pm":["e paradites","e pasdites"],"day_name":["e diel","e hënë","e martë","e mërkurë","e enjte","e premte","e shtunë"],"day_short":["Die","Hën","Mar","Mër","Enj","Pre","Sht"],"era":["p.K.","mb.K."],"era_name":["para Krishtit","mbas Krishtit"],"month_name":["janar","shkurt","mars","prill","maj","qershor","korrik","gusht","shtator","tetor","nëntor","dhjetor"],"month_short":["jan","shk","mar","pri","maj","qer","korr","gush","sht","tet","nën","dhj"],"order_full":"YMD","order_long":"YMD","order_medium":"YMD","order_short":"YMD"};
+	var nfs = {"decimal_separator":",","grouping_separator":" ","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(d.getFullYear()+'-'+((d.getMonth()+101)+'').substring(1)+'-'+((d.getDate()+101)+'').substring(1));}},SHORT:function(d){if(d){return((d.getFullYear()+'').substring(2)+'-'+((d.getMonth()+101)+'').substring(1)+'-'+((d.getDate()+101)+'').substring(1));}},SHORT_NOYEAR:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'-'+((d.getDate()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return((d.getFullYear()+'').substring(2)+'-'+((d.getMonth()+101)+'').substring(1));}},MEDIUM:function(d){if(d){return(d.getFullYear()+'-'+((d.getMonth()+101)+'').substring(1)+'-'+((d.getDate()+101)+'').substring(1));}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'-'+((d.getDate()+101)+'').substring(1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getMonth()+101)+'').substring(1)+'-'+((d.getDate()+101)+'').substring(1));}},LONG_NODAY:function(d){if(d){return(d.getFullYear()+'-'+((d.getMonth()+101)+'').substring(1));}},LONG:function(d){if(d){return(d.getFullYear()+'-'+((d.getMonth()+101)+'').substring(1)+'-'+((d.getDate()+101)+'').substring(1));}},FULL:function(d){if(d){return(d.getFullYear()+'-'+((d.getMonth()+101)+'').substring(1)+'-'+((d.getDate()+101)+'').substring(1));}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "AL" };
-	icu.getCountryName = function() { return "Shqipëria" };
+	icu.getCountryName = function() { return "Shqipëri" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
 	icu.getDateFormats = function() { return df; };
 	icu.getDateFormatSymbols = function() { return dfs; };
@@ -18,8 +20,7 @@
 	icu.getLanguage = function() { return "sq" };
 	icu.getLanguageName = function() { return "shqip" };
 	icu.getLocale = function() { return "sq-AL" };
-	icu.getLocaleName = function() { return "shqip (Shqipëria)" };
+	icu.getLocaleName = function() { return "shqip (Shqipëri)" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

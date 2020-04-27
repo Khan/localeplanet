@@ -1,11 +1,13 @@
 (function() {
 
-	var dfs = {"am_pm":["да палудня","пасля палудня"],"day_name":["нядзеля","панядзелак","аўторак","серада","чацвер","пятніца","субота"],"day_short":["нд","пн","аў","ср","чц","пт","сб"],"era":["да н.э.","н.э."],"era_name":["да н.э.","н.э."],"month_name":["студзень","люты","сакавік","красавік","май","чэрвень","ліпень","жнівень","верасень","кастрычнік","лістапад","снежань"],"month_short":["сту","лют","сак","кра","май","чэр","ліп","жні","вер","кас","ліс","сне"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["AM","PM"],"day_name":["нядзеля","панядзелак","аўторак","серада","чацвер","пятніца","субота"],"day_short":["нд","пн","аў","ср","чц","пт","сб"],"era":["да н.э.","н.э."],"era_name":["да нараджэння Хрыстова","ад нараджэння Хрыстова"],"month_name":["студзеня","лютага","сакавіка","красавіка","мая","чэрвеня","ліпеня","жніўня","верасня","кастрычніка","лістапада","снежня"],"month_short":["сту","лют","сак","кра","мая","чэр","ліп","жні","вер","кас","ліс","сне"],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":" ","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1)+'.'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1));}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+'.'+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1)+'.'+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(d.getDate()+'.'+(d.getMonth()+1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+d.getDate()+'.'+(d.getMonth()+1));}},LONG_NODAY:function(d){if(d){return(dfs.day_name[d.getDay()]+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getDate()+','+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getDate()+','+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "BY" };
 	icu.getCountryName = function() { return "Беларусь" };
@@ -20,6 +22,5 @@
 	icu.getLocale = function() { return "be-BY" };
 	icu.getLocaleName = function() { return "беларуская (Беларусь)" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

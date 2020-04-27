@@ -3,10 +3,12 @@
 	var dfs = {"am_pm":["Առ\u2024","Կե\u2024"],"day_name":["Կիրակի","Երկուշաբթի","Երեքշաբթի","Չորեքշաբթի","Հինգշաբթի","Ուրբաթ","Շաբաթ"],"day_short":["Կիր","Երկ","Երք","Չոր","Հնգ","Ուր","Շաբ"],"era":["Մ\u2024Թ\u2024Ա\u2024","Մ\u2024Թ\u2024"],"era_name":["Մ\u2024Թ\u2024Ա\u2024","Մ\u2024Թ\u2024"],"month_name":["Հունվար","Փետրվար","Մարտ","Ապրիլ","Մայիս","Հունիս","Հուլիս","Օգոստոս","Սեպտեմբեր","Հոկտեմբեր","Նոյեմբեր","Դեկտեմբեր"],"month_short":["Հնվ","Փտվ","Մրտ","Ապր","Մյս","Հնս","Հլս","Օգս","Սեպ","Հոկ","Նոյ","Դեկ"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
 	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
-	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
-		
+
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
+
 	icu.getCountry = function() { return "AM" };
 	icu.getCountryName = function() { return "Հայաստանի Հանրապետութիւն" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
@@ -20,6 +22,5 @@
 	icu.getLocale = function() { return "null" };
 	icu.getLocaleName = function() { return "Հայերէն (Հայաստանի Հանրապետութիւն, REVISED)" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

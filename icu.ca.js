@@ -1,11 +1,13 @@
 (function() {
 
-	var dfs = {"am_pm":["a.m.","p.m."],"day_name":["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"],"day_short":["dg.","dl.","dt.","dc.","dj.","dv.","ds."],"era":["aC","dC"],"era_name":["aC","dC"],"month_name":["de gener","de febrer","de març","d\u2019abril","de maig","de juny","de juliol","d\u2019agost","de setembre","d\u2019octubre","de novembre","de desembre"],"month_short":["de gen.","de febr.","de març","d\u2019abr.","de maig","de juny","de jul.","d\u2019ag.","de set.","d\u2019oct.","de nov.","de des."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
+	var dfs = {"am_pm":["a. m.","p. m."],"day_name":["diumenge","dilluns","dimarts","dimecres","dijous","divendres","dissabte"],"day_short":["dg.","dl.","dt.","dc.","dj.","dv.","ds."],"era":["aC","dC"],"era_name":["abans de Crist","després de Crist"],"month_name":["de gener","de febrer","de març","d\u2019abril","de maig","de juny","de juliol","d\u2019agost","de setembre","d\u2019octubre","de novembre","de desembre"],"month_short":["de gen.","de febr.","de març","d\u2019abr.","de maig","de juny","de jul.","d\u2019ag.","de set.","d\u2019oct.","de nov.","de des."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":",","grouping_separator":".","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1));}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' / '+d.getFullYear());}},LONG:function(d){if(d){return(d.getDate()+' / '+dfs.month_name[d.getMonth()]+' / '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getDate()+' / '+dfs.month_name[d.getMonth()]+' / '+d.getFullYear());}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "" };
 	icu.getCountryName = function() { return "" };
@@ -20,6 +22,5 @@
 	icu.getLocale = function() { return "ca" };
 	icu.getLocaleName = function() { return "català" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

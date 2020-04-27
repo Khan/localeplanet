@@ -1,11 +1,13 @@
 (function() {
 
-	var dfs = {"am_pm":["രാവിലെ","വൈകുന്നേരം"],"day_name":["ഞായറാഴ്ച","തിങ്കളാഴ്ച","ചൊവ്വാഴ്ച","ബുധനാഴ്ച","വ്യാഴാഴ്ച","വെള്ളിയാഴ്ച","ശനിയാഴ്ച"],"day_short":["ഞായര്\u200D","തിങ്കള്\u200D","ചൊവ്വ","ബുധന്\u200D","വ്യാഴം","വെള്ളി","ശനി"],"era":["ക്രി.മൂ","ക്രി.പി."],"era_name":["ക്രിസ്തുവിനു് മുമ്പ്\u200C","ക്രിസ്തുവിന് പിന്\u200Dപ്"],"month_name":["ജനുവരി","ഫെബ്രുവരി","മാര്\u200Dച്ച്","ഏപ്രില്\u200D","മേയ്","ജൂണ്\u200D","ജൂലൈ","ആഗസ്റ്റ്","സെപ്റ്റംബര്\u200D","ഒക്ടോബര്\u200D","നവംബര്\u200D","ഡിസംബര്\u200D"],"month_short":["ജനു","ഫെബ്രു","മാര്\u200D","ഏപ്രി","മേയ്","ജൂണ്\u200D","ജൂലൈ","ഓഗ","സെപ്റ്റം","ഒക്ടോ","നവം","ഡിസം"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
+	var dfs = {"am_pm":["AM","PM"],"day_name":["ഞായറാഴ്\u200Cച","തിങ്കളാഴ്\u200Cച","ചൊവ്വാഴ്ച","ബുധനാഴ്\u200Cച","വ്യാഴാഴ്\u200Cച","വെള്ളിയാഴ്\u200Cച","ശനിയാഴ്\u200Cച"],"day_short":["ഞായർ","തിങ്കൾ","ചൊവ്വ","ബുധൻ","വ്യാഴം","വെള്ളി","ശനി"],"era":["ക്രി.മു.","എഡി"],"era_name":["ക്രിസ്\u200Cതുവിന് മുമ്പ്","ആന്നോ ഡൊമിനി"],"month_name":["ജനുവരി","ഫെബ്രുവരി","മാർച്ച്","ഏപ്രിൽ","മേയ്","ജൂൺ","ജൂലൈ","ഓഗസ്റ്റ്","സെപ്റ്റംബർ","ഒക്\u200Cടോബർ","നവംബർ","ഡിസംബർ"],"month_short":["ജനു","ഫെബ്രു","മാർ","ഏപ്രി","മേയ്","ജൂൺ","ജൂലൈ","ഓഗ","സെപ്റ്റം","ഒക്ടോ","നവം","ഡിസം"],"order_full":"MDY","order_long":"MDY","order_medium":"MDY","order_short":"MDY"};
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate()+'/'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'/'+d.getDate());}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+' '+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(dfs.month_short[d.getMonth()]+' '+d.getDate());}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+dfs.month_short[d.getMonth()]+' '+d.getDate());}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+dfs.month_name[d.getMonth()]+' '+d.getDate()+','+' '+d.getFullYear());}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "IN" };
 	icu.getCountryName = function() { return "ഇന്ത്യ" };
@@ -20,6 +22,5 @@
 	icu.getLocale = function() { return "ml-IN" };
 	icu.getLocaleName = function() { return "മലയാളം (ഇന്ത്യ)" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

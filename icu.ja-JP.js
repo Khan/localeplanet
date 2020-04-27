@@ -1,11 +1,13 @@
 (function() {
 
-	var dfs = {"am_pm":["午前","午後"],"day_name":["日曜日","月曜日","火曜日","水曜日","木曜日","金曜日","土曜日"],"day_short":["日","月","火","水","木","金","土"],"era":["BC","AD"],"era_name":["紀元前","西暦"],"month_name":["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"month_short":["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"order_full":"YMD","order_long":"YMD","order_medium":"YMD","order_short":"YMD"};
+	var dfs = {"am_pm":["午前","午後"],"day_name":["日曜日","月曜日","火曜日","水曜日","木曜日","金曜日","土曜日"],"day_short":["日","月","火","水","木","金","土"],"era":["紀元前","西暦"],"era_name":["紀元前","西暦"],"month_name":["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"month_short":["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"],"order_full":"YMD","order_long":"YMD","order_medium":"YMD","order_short":"YMD"};
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(d.getFullYear()+'/'+((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1));}},SHORT:function(d){if(d){return((d.getFullYear()+'').substring(2)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1));}},SHORT_NOYEAR:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return((d.getFullYear()+'').substring(2)+'/'+((d.getMonth()+101)+'').substring(1));}},MEDIUM:function(d){if(d){return(d.getFullYear()+'/'+((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1));}},MEDIUM_NOYEAR:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1));}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1));}},LONG_NODAY:function(d){if(d){return(d.getFullYear()+'/'+((d.getMonth()+101)+'').substring(1));}},LONG:function(d){if(d){return(d.getFullYear()+'/'+((d.getMonth()+101)+'').substring(1)+'/'+((d.getDate()+101)+'').substring(1));}},FULL:function(d){if(d){return(d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日');}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "JP" };
 	icu.getCountryName = function() { return "日本" };
@@ -18,8 +20,7 @@
 	icu.getLanguage = function() { return "ja" };
 	icu.getLanguageName = function() { return "日本語" };
 	icu.getLocale = function() { return "ja-JP" };
-	icu.getLocaleName = function() { return "日本語(日本)" };
+	icu.getLocaleName = function() { return "日本語 (日本)" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

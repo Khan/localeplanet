@@ -10,23 +10,15 @@ have, our own commafy method, etc.
 We like localeplanet because the data files are very short, and
 they're separated out per-language, just like we like.
 
-The short download.sh script downloads the latest data from
-localeplanet, making sure to get all the languages that babel
-supports.
+The short `download.sh` script downloads the latest data from
+localeplanet, making sure to get all the languages that babel (the python babel,
+not the JS babel) supports. It assumes that this localeplant repo and the
+webapp repo are up-to-date sibling folders.
 
-After downloading icu.en.js is modified in the following way:
+After running `download.sh`, you also need to run `add_module_exports.py`. This
+script updates each `icu.*.js` file to make it so that icu is exported as well
+as attached to the window object. This makes it so that icu becomes available
+when running our JS inside Node.
 
--       window.icu = window.icu || new Object();
--       var icu = window.icu;
-+    var icu;
-+
-+    if (typeof window !== "undefined") {
-+        icu = window.icu = window.icu || {};
-+    } else if (typeof module !== "undefined") {
-+        icu = module.exports = {};
-+    }
-
-This makes it so that icu becomes available when running our JS inside Node.
-
-After running download.sh, you also need to run add_module_exports.py. See
-add_module_exports.py for instructions.
+See [`add_module_exports.py`](./add_module_exports.py) for instructions and
+details of the exact modifications it makes.

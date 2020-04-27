@@ -4,8 +4,10 @@
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(d.getFullYear()+'年'+((d.getMonth()+101)+'').substring(1)+'月'+((d.getDate()+101)+'').substring(1)+'日');}},SHORT:function(d){if(d){return((d.getFullYear()+'').substring(2)+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日');}},SHORT_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'月'+d.getDate()+'日');}},SHORT_NODAY:function(d){if(d){return((d.getFullYear()+'').substring(2)+'年'+(d.getMonth()+1));}},MEDIUM:function(d){if(d){return(d.getFullYear()+'年'+(d.getMonth()+1)+'月'+d.getDate()+'日');}},MEDIUM_NOYEAR:function(d){if(d){return((d.getMonth()+1)+'月'+d.getDate()+'日');}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+(d.getMonth()+1)+'月'+d.getDate()+'日');}},LONG_NODAY:function(d){if(d){return(d.getFullYear()+'年'+((d.getMonth()+101)+'').substring(1)+' '+dfs.day_name[d.getDay()]);}},LONG:function(d){if(d){return(d.getFullYear()+'年'+((d.getMonth()+101)+'').substring(1)+'月'+((d.getDate()+101)+'').substring(1)+'日'+' '+dfs.day_name[d.getDay()]);}},FULL:function(d){if(d){return(d.getFullYear()+'年'+((d.getMonth()+101)+'').substring(1)+'月'+((d.getDate()+101)+'').substring(1)+'日'+' '+dfs.day_name[d.getDay()]);}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "HK" };
 	icu.getCountryName = function() { return "中国香港特别行政区" };
@@ -18,8 +20,7 @@
 	icu.getLanguage = function() { return "zh" };
 	icu.getLanguageName = function() { return "中文" };
 	icu.getLocale = function() { return "zh-Hans-HK" };
-	icu.getLocaleName = function() { return "中文（简体中文、中国香港特别行政区）" };
+	icu.getLocaleName = function() { return "中文（简体，中国香港特别行政区）" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;

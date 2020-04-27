@@ -1,11 +1,13 @@
 (function() {
 
 	var dfs = {"am_pm":["AM","PM"],"day_name":["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"],"day_short":["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],"era":["av. J.-C.","ap. J.-C."],"era_name":["avant Jésus-Christ","après Jésus-Christ"],"month_name":["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"],"month_short":["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
-	var nfs = {"decimal_separator":".","grouping_separator":"'","minus":"-"};
+	var nfs = {"decimal_separator":",","grouping_separator":" ","minus":"-"};
 	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+d.getFullYear());}},SHORT:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1)+'.'+(d.getFullYear()+'').substring(2));}},SHORT_NOYEAR:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'.'+((d.getMonth()+101)+'').substring(1));}},SHORT_NODAY:function(d){if(d){return(((d.getMonth()+101)+'').substring(1)+'.'+(d.getFullYear()+'').substring(2));}},MEDIUM:function(d){if(d){return(d.getDate()+' '+dfs.month_short[d.getMonth()]+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(d.getDate()+' '+dfs.month_short[d.getMonth()]);}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+d.getDate()+' '+dfs.month_short[d.getMonth()]);}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(d.getDate()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+','+' '+d.getDate()+'.'+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}}};
 	
-	window.icu = window.icu || new Object();
-	var icu = window.icu;	
+	var icu = {};
+	if (typeof window !== "undefined") {
+		icu = window.icu = window.icu || {};
+	}
 		
 	icu.getCountry = function() { return "CH" };
 	icu.getCountryName = function() { return "Suisse" };
@@ -20,6 +22,5 @@
 	icu.getLocale = function() { return "fr-CH" };
 	icu.getLocaleName = function() { return "français (Suisse)" };
 
+	module.exports = icu;
 })();
-
-module.exports = icu;
