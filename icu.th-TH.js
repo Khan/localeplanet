@@ -2,13 +2,13 @@
 
 	var dfs = {"am_pm":["ก่อนเที่ยง","หลังเที่ยง"],"day_name":["วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัสบดี","วันศุกร์","วันเสาร์"],"day_short":["อา.","จ.","อ.","พ.","พฤ.","ศ.","ส."],"era":["พ.ศ."],"era_name":["พุทธศักราช"],"month_name":["มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"],"month_short":["ม.ค.","ก.พ.","มี.ค.","เม.ย.","พ.ค.","มิ.ย.","ก.ค.","ส.ค.","ก.ย.","ต.ค.","พ.ย.","ธ.ค."],"order_full":"DMY","order_long":"DMY","order_medium":"DMY","order_short":"DMY"};
 	var nfs = {"decimal_separator":".","grouping_separator":",","minus":"-"};
-	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return(d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear());}},SHORT_NOYEAR:function(d){if(d){return(d.getDate()+'/'+(d.getMonth()+1));}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+'/'+d.getFullYear());}},MEDIUM:function(d){if(d){return(d.getDate()+' '+dfs.month_short[d.getMonth()]+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(d.getDate()+' '+dfs.month_short[d.getMonth()]);}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+d.getDate()+' '+dfs.month_short[d.getMonth()]);}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(d.getDate()+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+'ที่ '+d.getDate()+' '+dfs.month_name[d.getMonth()]+' '++' '+d.getFullYear());}}};
-	
+	var df = {SHORT_PADDED_CENTURY:function(d){if(d){return(((d.getDate()+101)+'').substring(1)+'/'+((d.getMonth()+101)+'').substring(1)+'/'+d.getFullYear());}},SHORT:function(d){if(d){return(d.getDate()+'/'+(d.getMonth()+1)+'/'+d.getFullYear());}},SHORT_NOYEAR:function(d){if(d){return(d.getDate()+'/'+(d.getMonth()+1));}},SHORT_NODAY:function(d){if(d){return((d.getMonth()+1)+'/'+d.getFullYear());}},MEDIUM:function(d){if(d){return(d.getDate()+' '+dfs.month_short[d.getMonth()]+' '+d.getFullYear());}},MEDIUM_NOYEAR:function(d){if(d){return(d.getDate()+' '+dfs.month_short[d.getMonth()]);}},MEDIUM_WEEKDAY_NOYEAR:function(d){if(d){return(dfs.day_short[d.getDay()]+' '+d.getDate()+' '+dfs.month_short[d.getMonth()]);}},LONG_NODAY:function(d){if(d){return(dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},LONG:function(d){if(d){return(d.getDate()+' '+dfs.month_name[d.getMonth()]+' '+d.getFullYear());}},FULL:function(d){if(d){return(dfs.day_name[d.getDay()]+'ที่ '+d.getDate()+' '+dfs.month_name[d.getMonth()]+' '+' '+d.getFullYear());}}};
+
 	var icu = {};
 	if (typeof window !== "undefined") {
 		icu = window.icu = window.icu || {};
 	}
-		
+
 	icu.getCountry = function() { return "TH" };
 	icu.getCountryName = function() { return "ไทย" };
 	icu.getDateFormat = function(formatCode) { var retVal = {}; retVal.format = df[formatCode]; return retVal; };
